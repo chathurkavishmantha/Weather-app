@@ -33,11 +33,11 @@ const WeatherDataInputs = ({setQuery, units, setUnits}) => {
 
 
   return (
-    <div className='flex flex-row justify-center my-6 bg-[#2352aa60] p-2'>
+    <div className='flex flex-row justify-center my-6  p-2'>
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input 
               type="text" 
-              className='text-md font-light p-2 w-fll shadow-xl focus:outline-none capitalize placeholder:lowercase rounded-3xl text-center' 
+              className='text-md font-light p-2 w-[100%] shadow-xl focus:outline-none capitalize placeholder:lowercase rounded-3xl lg:text-start lg:px-5' 
               placeholder='Search of city'
               onChange={(e)=>setCity(e.currentTarget.value)}
         />

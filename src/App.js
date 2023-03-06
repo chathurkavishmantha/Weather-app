@@ -6,6 +6,7 @@ import TemperatureAndDetails from './components/TemperatureAndDetails';
 import Forecast from './components/Forecast';
 import { getFormattedWeatherData } from './services/weatherSerices';
 import { useEffect, useState } from 'react';
+import {cloud} from '../src/img/cloud.jpg';
 
 
 function App() {
@@ -28,7 +29,10 @@ function App() {
 
 
   return (
-    <div className="mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400">
+    <div className="h-[100vh]  bg-cloud-img bg-no-repeat bg-cover shadow-xl lg:py-2 shadow-gray-400
+                    max-sm:bg-cover max-sm:w-full max-sm:px-2 max-sm:pt-5 max-sm:h-[100vh]">
+      <div className='lg:h-[98vh] lg:mx-auto max-w-screen-lg lg:px-20 lg:py-10 lg:backdrop-brightness-50 rounded
+                      '>
       <TopButtons setQuery={setQuery} />
       <WeatherDataInputs setQuery={setQuery} units={units} setUnits={setUnits} />
 
@@ -40,6 +44,7 @@ function App() {
           <Forecast items={weather.daily} title="daily forecast" />
         </div>
       )}
+      </div>
       
     </div>
   );

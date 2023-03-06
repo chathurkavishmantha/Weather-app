@@ -4,7 +4,7 @@ import { formatToLocalTime } from '../services/weatherSerices';
 const TimeAndLocation = ({weather: {dt,timezone, name, country}}) => {
   return (
     <div className=''>
-      <div className="flex items-center justify-center my-6">
+      <div className="flex items-center justify-center my-6 ">
         <p className="text-white tet-xl font-extralight">
           {formatToLocalTime(dt,timezone)}
         </p>
